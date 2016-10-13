@@ -1,0 +1,4 @@
+locate sandbox/ | rm *.tmp
+find / -name '*.html' -exec grep "oncology" {} \; > oncology-pages
+find / -name '*.html' -exec grep "radiology" {} \; > radiology-pages
+comm oncology-pages radiology-pages > comm_output
